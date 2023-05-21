@@ -1,0 +1,240 @@
+{
+    # The following skill definition is order by
+    # 1. Shared configuration across skills
+    # 2. Skill category
+    # 3. Skill order in character UI
+    # 4. Misc skills which are not available for character (usually for AI)
+
+    # Shared configuration
+    "Shared": {
+        # Affects CarrierGroup, FighterUplink
+        "FIGHTER_BAYS_THRESHOLD": 8,  # default 8
+        # Affects TacticalDrills, CrewTraining, FluxRegulation
+        "OP_THRESHOLD": 240,  # default 240
+        # Affects FieldRepairs, ContainmentProcedures
+        "OP_ALL_THRESHOLD": 240
+    },
+    # Combat
+    "Helmsmanship": {
+        "MANEUVERABILITY_BONUS": 50,  # default 50
+        "SPEED_BONUS": 10,  # default 10
+        "ELITE_SPEED_BONUS_FLAT": 5,  # default 5
+        "ZERO_FLUX_LEVEL": 1  # default 1
+    },
+    "CombatEndurance": {
+        "PEAK_TIME_BONUS": 60,  # default 60
+        "DEGRADE_REDUCTION_PERCENT": 25,  # default 25
+        "MAX_CR_BONUS": 15,  # default 15
+        "MAX_REGEN_LEVEL": 0.5,  # default 0.5
+        "REGEN_RATE": 0.005,  # default 0.005
+        "TOTAL_REGEN_MAX_POINTS": 2000,  # default 2000
+        "TOTAL_REGEN_MAX_HULL_FRACTION": 0.5  # default 0.5
+    },
+    "ImpactMitigation": {
+        "MANEUVERABILITY_BONUS_LARGE": 50,  # default 50
+        "MANEUVERABILITY_BONUS_SMALL": 25,  # default 25
+        "MAX_DAMAGE_REDUCTION_BONUS": 0.05,  # default 0.05
+        "ARMOR_DAMAGE_REDUCTION": 25,  # default 25
+        "ARMOR_KINETIC_REDUCTION": 50,  # default 50
+        "DAMAGE_TO_MODULES_REDUCTION": 50  # default 50
+    },
+    "DamageControl": {
+        "SECONDS_PER_PROC": 2,  # default 2
+        "INSTA_REPAIR": 0.25,  # default 0.25
+        "CREW_LOSS_REDUCTION": 50,  # default 50
+        "MODULE_REPAIR_BONUS": 50,  # default 50
+        "HULL_DAMAGE_REDUCTION": 25,  # default 25
+        "ELITE_DAMAGE_THRESHOLD": 500,  # default 500
+        "ELITE_DAMAGE_REDUCTION_PERCENT": 60  # default 60
+    },
+    "FieldModulation": {
+        "SHIELD_DAMAGE_REDUCTION": 15,  # default 15
+        "FLUX_SHUNT_DISSIPATION": 15,  # default 15
+        "PHASE_FLUX_UPKEEP_REDUCTION": 25,  # default 25
+        "PHASE_COOLDOWN_REDUCTION": 50  # default 50
+    },
+    "PointDefense": {
+        "FIGHTER_DAMAGE_BONUS": 50,  # default 50
+        "MISSILE_DAMAGE_BONUS": 50,  # default 50
+        "PD_RANGE_BONUS_FLAT": 200  # default 200
+    },
+    "TargetAnalysis": {
+        # This skill does not expose any variable that can be modified
+        # Thus leave it empty here
+    },
+    "BallisticMastery": {
+        "PROJ_SPEED_BONUS": 33,  # default 33
+        "DAMAGE_BONUS": 10,  # default 10
+        "RANGE_BONUS": 10  # default 10
+    },
+    "SystemsExpertise": {
+        "BONUS_CHARGES": 1,  # default 1, in-game description doesn't update
+        "REGEN_PERCENT": 50,  # default 50
+        "SYSTEM_COOLDOWN_REDUCTION_PERCENT": 33,  # default 33
+        "RANGE_PERCENT": 50,  # default 50
+        "PEAK_TIME_BONUS": 30,  # default 30
+        "OVERLOAD_REDUCTION": 25,  # default 25
+        "MALFUNCTION_CHANCE_MULT": 0.5  # default 0.5
+    },
+    "MissileSpecialization": {
+        # This skill does not expose any variable that can be modified
+        # Thus leave it empty here
+    },
+    # Leadership
+    "TacticalDrills": {
+        "DAMAGE_PERCENT": 5,  # default 5
+        "ATTACK_BONUS": 50,  # default 50
+        "CASUALTIES_MULT": 0.75  # default 0.75
+    },
+    "CoordinatedManeuvers": {
+        "NAV_FRIGATES": 6,  # default 6
+        "NAV_DESTROYERS": 3,  # default 3
+        "NAV_OTHER": 1,  # default 1
+        "CP_REGEN_FRIGATES": 50,  # default 50
+        "CP_REGEN_DESTROYERS": 25  # default 25
+    },
+    "WolfpackTactics": {
+        "DAMAGE_TO_LARGER_BONUS": 20,  # default 20
+        "DAMAGE_TO_LARGER_BONUS_DEST": 10,  # default 10
+        "PEAK_TIME_BONUS": 50,  # default 50
+        "PEAK_TIME_BONUS_DEST": 25  # default 25
+    },
+    "CrewTraining": {
+        "CR_PERCENT": 15  # default 15
+    },
+    "CarrierGroup": {
+        "REPLACEMENT_RATE_PERCENT": 50,  # default 50
+        "OFFICER_MULT": 1.5  # default 1.5
+    },
+    "FighterUplink": {
+        "MAX_SPEED_PERCENT": 20,  # default 20
+        "CREW_LOSS_PERCENT": 50,  # default 50
+        "TARGET_LEADING_BONUS": 50  # default 50
+    },
+    "OfficerTraining": {
+        # This skill does not expose any variable that can be modified
+        # Thus leave it empty here
+    },
+    "OfficerManagement": {
+        "NUM_OFFICERS_BONUS": 2,  # default 2
+        "CP_BONUS": 2  # default 2
+    },
+    "BestOfTheBest": {
+        "EXTRA_MODS": 1,  # default 1
+        "DEPLOYMENT_BONUS": 0.1  # default 0.1
+    },
+    "SupportDoctrine": {
+        "COMMAND_POINT_REGEN_PERCENT": 100,  # default 100
+        "DP_REDUCTION": 0.2,  # default 0.2
+        "DP_REDUCTION_MAX": 10  # default 10
+    },
+    # Technology
+    "Navigation": {
+        "TERRAIN_PENALTY_REDUCTION": 30,  # default 30
+        "FLEET_BURN_BONUS": 1,  # default 1
+        "SB_BURN_BONUS": 1  # default 1
+    },
+    "Sensors": {
+        "DETECTED_BONUS": 25,  # default 25
+        "SENSOR_BONUS": 25,  # default 25
+        "SLOW_BURN_BONUS": 3  # default 3
+    },
+    "GunneryImplants": {
+        "RECOIL_BONUS": 25,  # default 25
+        "TARGET_LEADING_BONUS": 100,  # default 100
+        "RANGE_BONUS": 15,  # default 15
+        "EW_FRIGATES": 4,  # default 4
+        "EW_DESTROYERS": 2,  # default 2
+        "EW_OTHER": 1  # default 1
+    },
+    "EnergyWeaponMastery": {
+        "ENERGY_DAMAGE_PERCENT": 30,  # default 30
+        "MIN_RANGE": 600,  # default 600
+        "MAX_RANGE": 1000  # default 1000
+    },
+    "ElectronicWarfare": {
+        "PER_SHIP_BONUS": 1  # default 1
+    },
+    "FluxRegulation": {
+        "VENTS_BONUS": 5,  # default 5
+        "CAPACITORS_BONUS": 5,  # default 5
+        "DISSIPATION_PERCENT": 10,  # default 10
+        "CAPACITY_PERCENT": 10  # default 10
+    },
+    "PhaseCoilTuning": {
+        "PHASE_OP_THRESHOLD": 40,  # default 40
+        "PHASE_SPEED_BONUS": 50,  # default 50
+        "PEAK_TIME_BONUS": 180,  # default 180
+        "PHASE_SHIP_SENSOR_BONUS_PERCENT": 100  # default 100
+    },
+    "CyberneticAugmentation": {
+        "MAX_ELITE_SKILLS_BONUS": 2  # default 2
+    },
+    "NeuralLink": {
+        "INSTANT_TRANSFER_DP": 50  # default 50
+    },
+    "AutomatedShips": {
+        "AUTOMATED_POINTS_THRESHOLD": 200,  # default 200
+        "MAX_CR_BONUS": 100  # default 100
+    },
+    # Industry
+    "BulkTransport": {
+        "CARGO_CAPACITY_MAX_PERCENT": 50,  # default 50
+        "CARGO_CAPACITY_THRESHOLD": 2000,  # default 2000
+        "FUEL_CAPACITY_MAX_PERCENT": 50,  # default 50
+        "FUEL_CAPACITY_THRESHOLD": 2000,  # default 2000
+        "PERSONNEL_CAPACITY_MAX_PERCENT": 50,  # default 50
+        "PERSONNEL_CAPACITY_THRESHOLD": 5000, # default 5000
+        "BURN_BONUS": 2  # default 2
+    },
+    "Salvaging": {
+        "CREW_LOSS_REDUCTION": 75, # default 75
+        "SALVAGE_BONUS": 50  # default 50
+    },
+    "FieldRepairs": {
+        # This skill does not expose any variable that can be modified
+        # Thus leave it empty here
+    },
+    "OrdnanceExpertise": {
+        "FLUX_PER_OP": 2,  # default 2
+        "CAP_PER_OP": 20  # default 20
+    },
+    "PolarizedArmor": {
+        "EFFECTIVE_ARMOR_BONUS": 50,  # default 50
+        "EMP_BONUS_PERCENT": 50,  # default 50
+        "VENT_RATE_BONUS": 25,  # default 25
+        "NON_SHIELD_FLUX_LEVEL": 50  # default 50
+    },
+    "ContainmentProcedures": {
+        "CREW_LOSS_REDUCTION": 50,  # default 50
+        "FUEL_USE_REDUCTION_MAX_PERCENT": 50,  # default 50
+        "FUEL_USE_REDUCTION_MAX_FUEL": 25,  # default 25
+        "FUEL_SALVAGE_BONUS": 25  # default 25
+    },
+    "MakeshiftEquipment": {
+        "SUPPLY_USE_REDUCTION_MAX_PERCENT": 50,  # default 50
+        "SUPPLY_USE_REDUCTION_MAX_UNITS": 100, # default 100
+        "SURVEY_COST_MULT": 0.5  # default 0.5
+    },
+    "IndustrialPlanning": {
+        "SUPPLY_BONUS": 1,  # default 1
+        "CUSTOM_PRODUCTION_BONUS": 50  # default 50
+    },
+    "HullRestoration": {
+        "CR_PER_SMOD": 5,  # default 5
+        "DMOD_AVOID_MAX": 0.9,  # default 0.9
+        "DMOD_AVOID_MIN": 0.75,  # default 0.75
+        "DMOD_AVOID_MIN_DP": 5,  # default 5
+        "DMOD_AVOID_MAX_DP": 60  # default 60
+    },
+    "DerelictOperations": {
+        "MINUS_DP_PERCENT_PER_DMOD": 6  # default 6
+    },
+    # Misc Skill
+    "Hypercognition": {   # Alpha core colony skill
+        "ACCESS": 0.1,  # default 0.1
+        "FLEET_SIZE": 20,  # default 20
+        "DEFEND_BONUS": 50,  # default 50
+        "STABILITY_BONUS": 1  # default 1
+    }
+}
