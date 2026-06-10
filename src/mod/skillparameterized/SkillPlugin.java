@@ -7,6 +7,7 @@ import org.json.JSONException;
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
 
+import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
 // Combat
 import com.fs.starfarer.api.impl.campaign.skills.Helmsmanship;
 import com.fs.starfarer.api.impl.campaign.skills.CombatEndurance;
@@ -29,28 +30,30 @@ import com.fs.starfarer.api.impl.campaign.skills.CarrierGroup;
 // import com.fs.starfarer.api.impl.campaign.skills.OfficerTraining;
 import com.fs.starfarer.api.impl.campaign.skills.OfficerManagement;
 
+// Technology
+import com.fs.starfarer.api.impl.campaign.skills.Navigation;
+import com.fs.starfarer.api.impl.campaign.skills.Sensors;
+import com.fs.starfarer.api.impl.campaign.skills.GunneryImplants;
+import com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery;
+import com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare;
+import com.fs.starfarer.api.impl.campaign.skills.FluxRegulation;
+import com.fs.starfarer.api.impl.campaign.skills.PhaseCorps;
+import com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation;
 import com.fs.starfarer.api.impl.campaign.skills.AutomatedShips;
-import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
+
+// Industry
 import com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest;
 import com.fs.starfarer.api.impl.campaign.skills.BulkTransport;
 import com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures;
-import com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation;
 import com.fs.starfarer.api.impl.campaign.skills.DerelictContingent;
-import com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare;
-import com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery;
-import com.fs.starfarer.api.impl.campaign.skills.FluxRegulation;
-import com.fs.starfarer.api.impl.campaign.skills.GunneryImplants;
 import com.fs.starfarer.api.impl.campaign.skills.HullRestoration;
 import com.fs.starfarer.api.impl.campaign.skills.Hypercognition;
 import com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning;
 import com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment;
-import com.fs.starfarer.api.impl.campaign.skills.Navigation;
 import com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript;
 import com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise;
-import com.fs.starfarer.api.impl.campaign.skills.PhaseCorps;
 import com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor;
 import com.fs.starfarer.api.impl.campaign.skills.Salvaging;
-import com.fs.starfarer.api.impl.campaign.skills.Sensors;
 import com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine;
 
 
