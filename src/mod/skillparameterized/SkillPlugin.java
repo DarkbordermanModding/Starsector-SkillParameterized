@@ -29,6 +29,8 @@ import com.fs.starfarer.api.impl.campaign.skills.FighterUplink;
 import com.fs.starfarer.api.impl.campaign.skills.CarrierGroup;
 // import com.fs.starfarer.api.impl.campaign.skills.OfficerTraining;
 import com.fs.starfarer.api.impl.campaign.skills.OfficerManagement;
+import com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest;
+import com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine;
 
 // Technology
 import com.fs.starfarer.api.impl.campaign.skills.Navigation;
@@ -38,23 +40,24 @@ import com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery;
 import com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare;
 import com.fs.starfarer.api.impl.campaign.skills.FluxRegulation;
 import com.fs.starfarer.api.impl.campaign.skills.PhaseCorps;
+import com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript;
 import com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation;
 import com.fs.starfarer.api.impl.campaign.skills.AutomatedShips;
 
 // Industry
-import com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest;
 import com.fs.starfarer.api.impl.campaign.skills.BulkTransport;
-import com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures;
-import com.fs.starfarer.api.impl.campaign.skills.DerelictContingent;
-import com.fs.starfarer.api.impl.campaign.skills.HullRestoration;
-import com.fs.starfarer.api.impl.campaign.skills.Hypercognition;
-import com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning;
-import com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment;
-import com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript;
+import com.fs.starfarer.api.impl.campaign.skills.Salvaging;
+// import com.fs.starfarer.api.impl.campaign.skills.FieldRepairs;
 import com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise;
 import com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor;
-import com.fs.starfarer.api.impl.campaign.skills.Salvaging;
-import com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine;
+import com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures;
+import com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment;
+import com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning;
+import com.fs.starfarer.api.impl.campaign.skills.HullRestoration;
+import com.fs.starfarer.api.impl.campaign.skills.DerelictContingent;
+
+// Misc
+import com.fs.starfarer.api.impl.campaign.skills.Hypercognition;
 
 
 public class SkillPlugin extends BaseModPlugin {
