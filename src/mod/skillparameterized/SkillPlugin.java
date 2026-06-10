@@ -1,32 +1,40 @@
 package mod.skillparameterized;
 
+import java.lang.annotation.Target;
+
 import org.json.JSONException;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.impl.campaign.skills.AutomatedShips;
+
+// Combat
+import com.fs.starfarer.api.impl.campaign.skills.Helmsmanship;
+import com.fs.starfarer.api.impl.campaign.skills.CombatEndurance;
+import com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation;
+import com.fs.starfarer.api.impl.campaign.skills.DamageControl;
+import com.fs.starfarer.api.impl.campaign.skills.FieldModulation;
+import com.fs.starfarer.api.impl.campaign.skills.PointDefense;
+import com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis;
 import com.fs.starfarer.api.impl.campaign.skills.BallisticMastery;
+import com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise;
+
+import com.fs.starfarer.api.impl.campaign.skills.AutomatedShips;
 import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
 import com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest;
 import com.fs.starfarer.api.impl.campaign.skills.BulkTransport;
 import com.fs.starfarer.api.impl.campaign.skills.CarrierGroup;
-import com.fs.starfarer.api.impl.campaign.skills.CombatEndurance;
 import com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures;
 import com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers;
 import com.fs.starfarer.api.impl.campaign.skills.CrewTraining;
 import com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation;
-import com.fs.starfarer.api.impl.campaign.skills.DamageControl;
 import com.fs.starfarer.api.impl.campaign.skills.DerelictContingent;
 import com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare;
 import com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery;
-import com.fs.starfarer.api.impl.campaign.skills.FieldModulation;
 import com.fs.starfarer.api.impl.campaign.skills.FighterUplink;
 import com.fs.starfarer.api.impl.campaign.skills.FluxRegulation;
 import com.fs.starfarer.api.impl.campaign.skills.GunneryImplants;
-import com.fs.starfarer.api.impl.campaign.skills.Helmsmanship;
 import com.fs.starfarer.api.impl.campaign.skills.HullRestoration;
 import com.fs.starfarer.api.impl.campaign.skills.Hypercognition;
-import com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation;
 import com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning;
 import com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment;
 import com.fs.starfarer.api.impl.campaign.skills.Navigation;
@@ -34,12 +42,10 @@ import com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript;
 import com.fs.starfarer.api.impl.campaign.skills.OfficerManagement;
 import com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise;
 import com.fs.starfarer.api.impl.campaign.skills.PhaseCorps;
-import com.fs.starfarer.api.impl.campaign.skills.PointDefense;
 import com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor;
 import com.fs.starfarer.api.impl.campaign.skills.Salvaging;
 import com.fs.starfarer.api.impl.campaign.skills.Sensors;
 import com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine;
-import com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise;
 import com.fs.starfarer.api.impl.campaign.skills.TacticalDrills;
 import com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics;
 
@@ -105,6 +111,12 @@ public class SkillPlugin extends BaseModPlugin {
     PointDefense.FIGHTER_DAMAGE_BONUS = loadFloat("PointDefense", "FIGHTER_DAMAGE_BONUS");
     PointDefense.MISSILE_DAMAGE_BONUS = loadFloat("PointDefense", "MISSILE_DAMAGE_BONUS");
     PointDefense.PD_RANGE_BONUS_FLAT = loadFloat("PointDefense", "PD_RANGE_BONUS_FLAT");
+
+    TargetAnalysis.DAMAGE_TO_FRIGATES = loadFloat("TargetAnalysis", "DAMAGE_TO_FRIGATES");
+    TargetAnalysis.DAMAGE_TO_DESTROYERS = loadFloat("TargetAnalysis", "DAMAGE_TO_DESTROYERS");
+    TargetAnalysis.DAMAGE_TO_CRUISERS = loadFloat("TargetAnalysis", "DAMAGE_TO_CRUISERS");
+    TargetAnalysis.DAMAGE_TO_CAPITALS = loadFloat("TargetAnalysis", "DAMAGE_TO_CAPITALS");
+    TargetAnalysis.DAMAGE_TO_MODULES_BONUS = loadFloat("TargetAnalysis", "DAMAGE_TO_MODULES_BONUS");
 
     BallisticMastery.PROJ_SPEED_BONUS = loadFloat("BallisticMastery", "PROJ_SPEED_BONUS");
     BallisticMastery.DAMAGE_BONUS = loadFloat("BallisticMastery", "DAMAGE_BONUS");

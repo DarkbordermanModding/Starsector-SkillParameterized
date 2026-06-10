@@ -59,8 +59,11 @@
         "PD_RANGE_BONUS_FLAT": 200  # default 200
     },
     "TargetAnalysis": {
-        # This skill does not expose any variable that can be modified
-        # Thus leave it empty here
+        "DAMAGE_TO_FRIGATES": 5,  # default 5
+        "DAMAGE_TO_DESTROYERS": 10,  # default 10
+        "DAMAGE_TO_CRUISERS": 15,  # default 15
+        "DAMAGE_TO_CAPITALS": 20,  # default 20
+        "DAMAGE_TO_MODULES_BONUS": 100  # default 100
     },
     "BallisticMastery": {
         "PROJ_SPEED_BONUS": 33,  # default 33
