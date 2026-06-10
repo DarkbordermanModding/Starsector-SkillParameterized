@@ -1,25 +1,36 @@
+plugins {
+    id 'java'
+}
+
 repositories {
     mavenCentral()
 }
 
-apply plugin: 'java'
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
 
-// project level config
 sourceSets.main.java.srcDir 'src'
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-archivesBaseName = 'skillparameterized'
 
-build {
+base {
+    archivesName = 'skillparameterized'
+}
+
+dependencies {
+    implementation fileTree(dir: './lib/', include: '*.jar')
+}
+
+jar {
     doLast {
         copy {
-            from jar
+            from archiveFile
             into 'jars'
         }
     }
 }
 
-task release(type: Zip) {
+tasks.register('release', Zip) {
     description 'Create releaseable zip file.'
     def cmdOutput = 'jq -rj .version mod_info.json'.execute().text
     from '.'
@@ -29,16 +40,11 @@ task release(type: Zip) {
     include 'sounds/'
     include 'jars/'
     include 'mod_info.json'
-    archiveName archivesBaseName + '-' + cmdOutput + '.zip'
-    destinationDir(file('bin/'))
+    archiveFileName = project.base.archivesName.get() + '-' + cmdOutput + '.zip'
+    destinationDirectory = file('bin/')
 }
 
-clean {
-    description 'Cleanup files'
+tasks.named('clean') {
     delete fileTree('jars/') { include '*.jar' }
     delete fileTree('bin/') { include '*.zip' }
-}
-
-dependencies {
-    implementation fileTree(dir: './lib/', include: '*.jar')
 }
